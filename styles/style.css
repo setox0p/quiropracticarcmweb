@@ -1,0 +1,291 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    background-color: #f5ceb7;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header .logo-img {
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
+}
+
+.header .menu {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header .navbar ul li {
+    display: inline-block;
+    margin: 0 8px; /* Aumenta el margen para mayor separación */
+}
+
+.header .navbar ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.7em;
+    padding: 10px 20px;
+    border: 2px solid #e0b79f;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.header .navbar ul li a:hover {
+    background-color: #e0b79f;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.header-content {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 1.3em;
+}
+
+.header-content .header-txt h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #fff;
+    font-size: 1em;
+}
+
+.sobre-mi-link {
+    text-decoration: overline;
+}
+
+#sobre-mi {
+    padding: 50px 0;
+    background-color: #e0b79f;
+}
+
+#sobre-mi h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.3em;
+    color: #333;
+}
+
+#experiencia-profesional {
+    padding: 50px 0;
+    background-color: #e0b79f;
+}
+
+#consulta-inicial {
+    padding: 50px 0;
+    background-color: #e0b79f;
+}
+
+#evaluacion-fisica-y-mandibular {
+    padding: 50px 0;
+    background-color: #e0b79f;
+}
+
+#diagnostico-y-planificacion-del-tratamiento {
+    padding: 50px 0;
+    background-color: #e0b79f;
+}
+
+#tecnologia-avanzada {
+    padding: 50px 0;
+    background-color: #e0b79f;
+}
+
+#preguntas-frecuentes {
+    padding: 50px 0;
+    background-color: #e0b79f;
+}
+
+.sobre-mi-content,
+.experiencia-profesional-content,
+.consulta-inicial-content,
+.evaluacion-fisica-y-mandibular-content,
+.diagnostico-y-planificacion-del-tratamiento-content,
+.section-content,
+.preguntas-frecuentes-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 1.1em;
+}
+
+.sobre-mi-texto,
+.experiencia-profesional-texto,
+.consulta-inicial-texto,
+.evaluacion-fisica-y-mandibular-texto,
+.diagnostico-y-planificacion-del-tratamiento-texto,
+.section-texto,
+.preguntas-frecuentes-texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.sobre-mi-texto p,
+.experiencia-profesional-texto p,
+.consulta-inicial-texto p,
+.evaluacion-fisica-y-mandibular-texto p,
+.diagnostico-y-planificacion-del-tratamiento-texto p,
+.section-texto p,
+.preguntas-frecuentes-texto p, 
+.tecnologia-avanzada p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.sobre-mi-imagen-principal,
+.sobre-mi-imagenes,
+.experiencia-profesional-imagenes,
+.consulta-inicial-imagenes,
+.evaluacion-fisica-y-mandibular-imagenes,
+.diagnostico-y-planificacion-del-tratamiento-imagenes,
+.section-imagenes,
+.preguntas-frecuentes-imagenes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.sobre-mi-img,
+.experiencia-profesional-img,
+.consulta-inicial-img,
+.evaluacion-fisica-y-mandibular-img,
+.diagnostico-y-planificacion-del-tratamiento-img,
+.section-img,
+.preguntas-frecuentes-img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; /* Agregado: transición para el efecto de escala */
+}
+
+.sobre-mi-img:hover,
+.experiencia-profesional-img:hover,
+.consulta-inicial-img:hover,
+.evaluacion-fisica-y-mandibular-img:hover,
+.diagnostico-y-planificacion-del-tratamiento-img:hover,
+.section-img:hover,
+.preguntas-frecuentes-img:hover {
+    transform: scale(1.05); /* Agregado: efecto de escala al hacer hover */
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer .footer-content {
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Media queries para responsive design */
+@media (max-width: 768px) {
+    .header .navbar ul li {
+        display: block;
+        margin: 10px 0; /* Aumenta el margen para mayor separación */
+    }
+
+    .header-content .header-txt h1 {
+        font-size: 2em; /* Ajusta el tamaño del título */
+    }
+
+    .sobre-mi-content,
+    .experiencia-profesional-content,
+    .consulta-inicial-content,
+    .evaluacion-fisica-y-mandibular-content,
+    .diagnostico-y-planificacion-del-tratamiento-content,
+    .section-content,
+    .preguntas-frecuentes-content {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .header-content .header-txt h1 {
+        font-size: 2em; /* Ajusta el tamaño del título */
+    }
+}
+
+/* Estilos para las secciones */
+section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+}
+
+/* grid y flex */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #f5ceb7;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.grid-item img.section-img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Efecto de escala en todas las imágenes al hacer hover */
+.grid-item img.section-img:hover {
+    transform: scale(1.05);
+}

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiropráctica RCM</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos CSS que definiste anteriormente */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .header {
+            background-color: #f5ceb7;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .header .logo-img {
+            max-width: 150px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .header .menu {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .header .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .header .navbar ul li {
+            display: inline-block;
+            margin: 0 8px; /* Aumenta el margen para mayor separación */
+        }
+
+        .header .navbar ul li a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.7em;
+            padding: 10px 20px;
+            border: 2px solid #e0b79f;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .header .navbar ul li a:hover {
+            background-color: #e0b79f;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .header-content {
+            text-align: center;
+            padding: 50px 0;
+            font-size: 1.3em;
+        }
+
+        .header-content .header-txt h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #fff;
+            font-size: 1em;
+        }
+
+        .sobre-mi-link {
+            text-decoration: overline;
+        }
+
+        #sobre-mi {
+            padding: 50px 0;
+            background-color: #e0b79f;
+        }
+
+        #sobre-mi h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.3em;
+            color: #333;
+        }
+
+        #experiencia-profesional {
+            padding: 50px 0;
+            background-color: #e0b79f;
+        }
+
+        #consulta-inicial {
+            padding: 50px 0;
+            background-color: #e0b79f;
+        }
+
+        #evaluacion-fisica-y-mandibular {
+            padding: 50px 0;
+            background-color: #e0b79f;
+        }
+
+        #diagnostico-y-planificacion-del-tratamiento {
+            padding: 50px 0;
+            background-color: #e0b79f;
+        }
+
+        #tecnologia-avanzada {
+            padding: 50px 0;
+            background-color: #e0b79f;
+        }
+
+        #preguntas-frecuentes {
+            padding: 50px 0;
+            background-color: #e0b79f;
+        }
+
+        .sobre-mi-content,
+        .experiencia-profesional-content,
+        .consulta-inicial-content,
+        .evaluacion-fisica-y-mandibular-content,
+        .diagnostico-y-planificacion-del-tratamiento-content,
+        .section-content,
+        .preguntas-frecuentes-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 1.1em;
+        }
+
+        .sobre-mi-texto,
+        .experiencia-profesional-texto,
+        .consulta-inicial-texto,
+        .evaluacion-fisica-y-mandibular-texto,
+        .diagnostico-y-planificacion-del-tratamiento-texto,
+        .section-texto,
+        .preguntas-frecuentes-texto {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .sobre-mi-texto p,
+        .experiencia-profesional-texto p,
+        .consulta-inicial-texto p,
+        .evaluacion-fisica-y-mandibular-texto p,
+        .diagnostico-y-planificacion-del-tratamiento-texto p,
+        .section-texto p,
+        .preguntas-frecuentes-texto p, 
+        .tecnologia-avanzada p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .sobre-mi-imagen-principal,
+        .sobre-mi-imagenes,
+        .experiencia-profesional-imagenes,
+        .consulta-inicial-imagenes,
+        .evaluacion-fisica-y-mandibular-imagenes,
+        .diagnostico-y-planificacion-del-tratamiento-imagenes,
+        .section-imagenes,
+        .preguntas-frecuentes-imagenes {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .sobre-mi-img,
+        .experiencia-profesional-img,
+        .consulta-inicial-img,
+        .evaluacion-fisica-y-mandibular-img,
+        .diagnostico-y-planificacion-del-tratamiento-img,
+        .section-img,
+        .preguntas-frecuentes-img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .footer .footer-content {
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .footer-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media queries para responsive design */
+        @media (max-width: 768px) {
+            .header .navbar ul li {
+                display: block;
+                margin: 10px 0; /* Aumenta el margen para mayor separación */
+            }
+
+            .header-content .header-txt h1 {
+                font-size: 2em; /* Ajusta el tamaño del título */
+            }
+
+            .sobre-mi-content,
+            .experiencia-profesional-content,
+            .consulta-inicial-content,
+            .evaluacion-fisica-y-mandibular-content,
+            .diagnostico-y-planificacion-del-tratamiento-content,
+            .section-content,
+            .preguntas-frecuentes-content {
+                flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+                align-items: center; /* Centra los elementos */
+            }
+
+            .header-content .header-txt h1 {
+                font-size: 2em; /* Ajusta el tamaño del título */
+            }
+        }
+
+        /* Estilos para las secciones */
+        section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .visible {
+            display: block;
+            opacity: 1;
+        }
+
+        /* CSS Grid y Flexbox */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .grid-item {
+            background-color: #f5ceb7;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .grid-item img.section-img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="assets\logo sin fondo.png" alt="Logo de la empresa" class="logo-img">
+        <div class="menu">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#sobre-mi" id="sobre-mi-link">Sobre Mí</a></li>
+                    <li><a href="#experiencia-profesional" id="experiencia-profesional-link">Experiencia Profesional</a></li>
+                    <li><a href="#consulta-inicial" id="consulta-inicial-link">Consulta Inicial</a></li>
+                    <li><a href="#evaluacion-fisica-y-mandibular" id="evaluacion-fisica-y-mandibular-link">Evaluación Física y Mandibular</a></li>
+                    <li><a href="#diagnostico-y-planificacion-del-tratamiento" id="diagnostico-y-planificacion-del-tratamiento-link">Diagnóstico y Planificación del Tratamiento</a></li>
+                    <li><a href="#tecnologia-avanzada" id="tecnologia-avanzada-link">Tecnología Avanzada</a></li>
+                    <li><a href="#preguntas-frecuentes" id="preguntas-frecuentes-link">Preguntas Frecuentes</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1>Recupera tu bienestar, salud y funcionalidad, con quiropráctica, porque menos es más.</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Sección Sobre mí -->
+        <section id="sobre-mi" class="section visible">
+            <div class="container">
+                <h2>Sobre mí:</h2>
+                <div class="sobre-mi-content grid-container">
+                    <div class="sobre-mi-imagen-principal grid-item">
+                        <img src="assets\Sobremi.jpg" alt="" class="sobre-mi-img">
+                    </div>
+                    <div class="sobre-mi-texto grid-item">
+                        <p>Hola, mi nombre es Marianela Sol Pernuzzi. Lic en kinesiología y Fisioterapía - Quiropráctica y Neurorehabilitación (M.P. 3373)</p>
+                        <p>Tengo 27 años de experiencia en la atención de pacientes niños, jóvenes y adultos.</p>
+                        <p>Mi pasión es ayudar a todas las personas que vienen a mi consulta y mejorar su calidad de vida, independientemente del diagnóstico que tengan, ya que no me gustan las etiquetas limitantes.</p>
+                        <p>He dedicado mi vida profesional al arte de reeducar. Viajo por el mundo impartiendo los conocimientos que adquirí gracias a las enseñanzas que me brindaron mis mentores. Estoy muy agradecida de ser quien soy.</p>
+                    </div>
+                    <div class="sobre-mi-imagenes grid-item">
+                        <img src="assets\SobremiColumna.jpg" alt="Otra foto de Marianela Sol Pernuzzi" class="sobre-mi-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Experiencia Profesional -->
+        <section id="experiencia-profesional" class="section">
+            <div class="container">
+                <h2>Experiencia Profesional:</h2>
+                <div class="section-content grid-container">
+                    <div class="section-texto grid-item">
+                        <p>En RCM, abordamos las alteraciones mecánicas de la columna vertebral, en particular del sistema neuro-musculoesquelético.</p>
+                        <p>El quiropráctico y reeducador detecta, analiza y corrige posibles disfunciones articulares en la columna vertebral, refiriéndose a estas como subluxaciones vertebrales, fijaciones o restricciones articulares con posible impacto neurológico como demuestran los estudios de neurofisiología articular.</p>
+                        <p>Y en consecuencia, posibles alteraciones en el equilibrio o la capacidad de homeostasis del cuerpo.</p>
+                        <p>Al corregirlas, el objetivo sería estimular la capacidad fisiológica del organismo. Todo esto se enfoca en la estrecha relación entre el sistema nervioso, columna vertebral y salud, entendida esta última como un estado de bienestar bio-psico-social según la OMS.</p>
+                    </div>
+                    <div class="section-imagenes grid-item">
+                        <img src="assets\experiencia4.png" alt="Imagen de experiencia profesional" class="section-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Consulta Inicial -->
+        <section id="consulta-inicial" class="section">
+            <div class="container">
+                <h2>Consulta Inicial:</h2>
+                <div class="section-content grid-container">
+                    <div class="section-texto grid-item">
+                        <p>Entrevista inicial para entender las necesidades del paciente, sus expectativas y los problemas específicos que está experimentando.</p>
+                        <p>Discusión de Síntomas: Se hablará sobre síntomas como dolo, inestabilidad, mareos, contracturas musculares, caídas, dolor de mandíbula, cuello, espalda, dolores de cabeza, migraña crónica, hernia de disco, lumbalgia, alteraciones musculoesqueléticas por trastornos neurológicos, problemas de mordida, o cualquier otro síntoma relevante.</p>
+                        <p>Formulario de Historia Clínica: El paciente completa un formulario detallado sobre su historia médica y dental.</p>
+                        <p>Incluyendo información sobre síntomas actuales, historial de tratamientos anteriores, medicación, y hábitos de salud.</p>
+                    </div>
+                    <div class="section-imagenes grid-item">
+                        <img src="" alt="Imagen de consulta inicial" class="section-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Evaluación Física y Mandibular -->
+        <section id="evaluacion-fisica-y-mandibular" class="section">
+            <div class="container">
+                <h2>Evaluación Física y Mandibular:</h2>
+                <div class="section-content grid-container">
+                    <div class="section-texto grid-item">
+                        <p>Examen físico y postural: Evaluación de la postura, la alineación de la columna vertebral, la movilidad articular y la tensión muscular. Puede incluir pruebas de rango de movimiento, palpación de la columna y análisis de la marcha.</p>
+                        <p>Examen mandibular: Evaluación de la articulación temporomandibular (ATM) y evaluación de la mordida. </p>
+                        <p>Evaluación Neurológica: Se pueden realizar pruebas neurológicas para evaluar la función nerviosa y detectar cualquier interferencia o disfunción que pueda estar presente.</p>
+                    </div>
+                    <div class="section-imagenes grid-item">
+                        <img src="assets\evFisicaMan.jpg" alt="Imagen de evaluación física y mandibular" class="section-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Diagnóstico y Planificación del Tratamiento -->
+        <section id="diagnostico-y-planificacion-del-tratamiento" class="section">
+            <div class="container">
+                <h2>Diagnóstico y Planificación del Tratamiento:</h2>
+                <div class="section-content grid-container">
+                    <div class="section-texto grid-item">
+                        <p>Revisión de Resultados: Una vez completadas las evaluaciones, los profesionales revisarán los resultados y discutirán los hallazgos con el paciente.</p>
+                        <p>Diagnóstico: Se establecerá un diagnóstico basado en la información recopilada durante la consulta y los exámenes.</p>
+                        <p>Plan de Tratamiento Personalizado: Se desarrollará un plan de tratamiento que puede incluir ajustes quiroprácticos, ejercicios de rehabilitación y recomendaciones sobre hábitos posturales y de salud, acordes a las necesidades y posibilidades del paciente.</p>
+                    </div>
+                    <div class="section-imagenes grid-item">
+                        <img src="diagnostico-y-planificacion-del-tratamiento.jpg" alt="Imagen de diagnóstico y planificación del tratamiento" class="section-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Tecnología Avanzada -->
+        <section id="tecnologia-avanzada" class="section">
+            <div class="container">
+                <h2>Tecnología Avanzada:</h2>
+                <div class="section-content grid-container">
+                    <div class="section-scanner grid-item">
+                        <h3>Equipos de Última Generación: Utilizamos tecnología avanzada para diagnósticos precisos y tratamientos efectivos.</h3>
+                        <p>Scanner “ThermoScan”: es un equipo termográfico de precisión que analiza la columna vertebral, utilizando los principios de termografía para detectar subluxaciones vertebrales. Es una herramienta de evaluación que proporciona imágenes termográficas en tiempo real de la columna vertebral, permitiendo a los quiroprácticos visualizar y localizar áreas de posible disfunción.</p>
+                        <img src="C:\Users\Usuario\Desktop\Quiropráctica\src\assets\scanner.jpg" alt="Imagen de Scanner" class="section-img">
+                    </div>
+                    <div class="section-tecnologia grid-item">
+                        <h3>Beneficios:</h3>
+                        <p>Detección precisa de desalineaciones vertebrales y posibles interferencias en el sistema nervioso.</p>
+                        <p>Evaluación objetiva y no invasiva del estado de la columna vertebral.</p>
+                        <p>Monitoreo del progreso del tratamiento quiropráctico a lo largo del tiempo.</p>
+                        <p>Optimización de los ajustes quiroprácticos y mejora de los resultados clínicos.</p>
+                        <img src="assets\integrador.jpg" alt="Imagen de tecnología avanzada" class="section-img">
+
+                        <h3>Acción Integral:</h3>
+                        <p>La atención integral según Palmer se centra en permitir que la inteligencia innata del cuerpo funcione correctamente al corregir las interferencias nerviosas mediante ajustes quiroprácticos, facilitando así el proceso natural de autocuración del organismo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Preguntas Frecuentes -->
+        <section id="preguntas-frecuentes" class="section">
+            <div class="container">
+                <h2>Preguntas Frecuentes:</h2>
+                <div class="section-content grid-container">
+                    <div class="section-texto grid-item">
+                        <p><strong>1. ¿Qué es la quiropráctica?</strong></p>
+                        <p>La quiropráctica es una disciplina de la salud que se enfoca en el diagnóstico, tratamiento y prevención de trastornos del sistema neuromusculoesquelético, y en los efectos de estos trastornos en la salud general.</p>
+                        <p><strong>2. ¿Es doloroso el tratamiento quiropráctico?</strong></p>
+                        <p>En general, los ajustes quiroprácticos no son dolorosos. Algunos pacientes pueden experimentar una leve incomodidad o sensibilidad después del tratamiento, pero esto generalmente es temporal y parte del proceso de recuperación.</p>
+                        <p><strong>3. ¿Cuántas sesiones necesitaré?</strong></p>
+                        <p>La cantidad de sesiones necesarias varía según la condición del paciente, la gravedad del problema y la respuesta individual al tratamiento. Después de una evaluación inicial, el quiropráctico podrá proporcionar una estimación más precisa.</p>
+                        <p><strong>4. ¿Es seguro el tratamiento quiropráctico?</strong></p>
+                        <p>Sí, el tratamiento quiropráctico es seguro cuando es realizado por profesionales calificados y con experiencia. Los quiroprácticos están capacitados para evaluar y tratar problemas de la columna vertebral y el sistema nervioso de manera segura y efectiva.</p>
+                    </div>
+                    <div class="section-imagenes grid-item">
+                        <img src="preguntas-frecuentes.jpg" alt="Imagen de preguntas frecuentes" class="section-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section contact-info">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="#" id="direccion-link">Dirección</a></li>
+                        <li><a href="https://wa.link/a7ntxl" id="telefono-link">Telefono</a></li>
+                        <li><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSDbhJPcMVzgflLsvGjGXlbHjzvLndrHSxRkchdntfDftBpmKHCHhfMzPCgLvjhcwdxJxnNx" id="email-link">Email</a></li>                  
+                    </ul>
+                </div>
+                <div class="footer-section social-media">
+                    <h3>Mis Redes:</h3>
+                    
+                    <a href="https://www.instagram.com/quiropractica.rcm?igsh=Mnd1dmpyNzVxZ2xh" target="_blank" rel="noopener">
+                        <img src="icon-instagram.png" alt="Instagram">
+                    </a>
+                    
+                    
+                    
+                </div>
+                <div class="footer-section sitemap">
+                    <h3>Mapa del Sitio</h3>
+                    <ul>
+                        <li><a href="#sobre-mi">Sobre Mí</a></li>
+                        <li><a href="#experiencia-profesional">Experiencia Profesional</a></li>
+                        <li><a href="#consulta-inicial">Consulta Inicial</a></li>
+                        <li><a href="#evaluacion-fisica-y-mandibular">Evaluación Física y Mandibular</a></li>
+                        <li><a href="#diagnostico-y-planificacion-del-tratamiento">Diagnóstico y Planificación del Tratamiento</a></li>
+                        <li><a href="#tecnologia-avanzada">Tecnología Avanzada</a></li>
+                        <li><a href="#preguntas-frecuentes">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section newsletter">
+                    <h3></h3>
+                    <form action="#">
+                        <input type="email" placeholder="Tu correo electrónico">
+                        <button type="submit">Quiero información</button>
+                    </form>
+                </div>
+                <div class="footer-section hours">
+                    <h3>Horarios de Atención</h3>
+                    
+                </div>
+                <div class="footer-section legal">
+                    <h3>Legal</h3>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Quiropráctica RCM. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('nav a');
+            const sections = document.querySelectorAll('section');
+
+            // Mostrar la sección "Sobre Mí" al cargar la página
+            document.getElementById('sobre-mi').classList.add('visible');
+
+            links.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+
+                    sections.forEach(section => {
+                        if (section === targetSection) {
+                            section.classList.add('visible');
+                        } else {
+                            section.classList.remove('visible');
+                        }
+                    });
+
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 50, 
+                        behavior: 'smooth'
+                    });
+
+                    document.getElementById('infoForm').addEventListener('submit', function(event) {
+                        event.preventDefault();
+
+                        const email = document.getElementById('userEmail').value;
+                        const subject = 'Información sobre los servicios';
+                        const body = 'Hola, quisiera recibir más información sobre sus servicios. Gracias.';
+        
+                        const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                        window.location.href = mailtoLink;
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
